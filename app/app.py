@@ -21,7 +21,6 @@ def lambda_handler(event, context):
         for ep in endpoints['Endpoints']:
             ep_name = ep['EndpointName']
             response = client.delete_endpoint(EndpointName=ep_name)
-
                         
     except ClientError as e:
         print(f'ERROR: {e}')
